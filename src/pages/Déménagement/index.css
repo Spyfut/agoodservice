@@ -1,0 +1,56 @@
+.Demenagement-Core {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.Demenagement {
+    flex: 0 48%;
+    text-align: left;
+}   
+
+.Demenagement.DemenagementImg img{
+    max-width: 100%;
+}
+
+.Demenagement.DemenagementImgLeft img {
+    border-radius: 0 10px;
+}
+
+.Demenagement.DemenagementImgRight img {
+    border-radius: 10px 0;
+}
+
+.Demenagement.Demenagement-Intro {
+    font-family: 'Geometria', sans-serif;
+    font-size: 0.9em;
+    vertical-align: top;
+}
+
+.Demenagement-Text {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.Demenagement-Title {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    color: #333;
+}
+
+.Demenagement-Text ul li{
+    line-height: 1.5em;
+    list-style: circle;
+}
+
+@media (max-width: 45.5em) {
+    .Demenagement-Core {
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+    }
+    
+    .Demenagement-Title {
+        margin-top: 0.5em;
+    }
+}

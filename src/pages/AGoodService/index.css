@@ -1,0 +1,51 @@
+.AGoodService-Core {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.AGoodService {
+    flex: 0 48%;
+    text-align: left;
+}   
+
+.AGoodService.AGoodServiceImg img{
+    max-width: 100%;
+}
+
+.AGoodService.AGoodServiceImgLeft img {
+    border-radius: 0 10px;
+}
+
+.AGoodService.AGoodServiceImgRight img {
+    border-radius: 10px 0;
+}
+
+.AGoodService.AGoodService-Intro {
+    font-family: 'Geometria', sans-serif;
+    font-size: 0.9em;
+    vertical-align: top;
+}
+
+.AGoodService-Text {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.AGoodService-Title {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    color: #333;
+}
+
+@media (max-width: 45.5em) {
+    .AGoodService-Core {
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+    }
+    
+    .AGoodService-Title {
+        margin-top: 0.5em;
+    }
+}

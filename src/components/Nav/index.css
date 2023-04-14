@@ -1,0 +1,168 @@
+@font-face {
+	font-family: 'Geometria';
+	src: url('../../fonts/Geometria.woff');
+}
+
+
+@keyframes slidein {
+    from {
+        margin-left: -50%;
+        visibility: hidden;
+    }
+  
+    to {
+        margin-left: 0%;
+        visibility: visible;
+    }
+  }
+
+@keyframes slideout {
+from {
+    margin-left: 0%;
+    visibility: visible;
+}
+
+to {
+    margin-left: -50%;
+    visibility: hidden;
+}
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+    }
+
+.Nav {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 0em 5em 0em;
+}
+
+.Nav-item.whiteNav {
+    color: white;
+}
+
+.Nav-item {
+    padding: 1em;
+    color: #333;
+    text-align: center;
+    font-family: 'Geometria', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.75em;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+}
+
+.Nav-item:hover::before {
+    content: "";
+    border-bottom: 2px solid #333;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding-bottom: 20px;
+}
+
+.Nav-item.whiteNav:hover::before {
+    border-bottom: 2px solid white;
+}
+
+.Nav-item:hover {
+    animation-name: opacity;
+    animation-duration: 1s;
+    opacity: 0.5;
+}
+
+.Nav-item.active {
+    opacity: 0.5;
+    border-bottom: 2px solid #333;
+    height: 0.7em;
+}
+
+.Nav-item.whiteNav.active {
+    opacity: 0.5;
+    border-bottom: 2px solid white;
+    height: 0.7em;
+}
+
+/* Mobile */
+
+@media (max-width: 45.5em) {
+    .Nav {
+        display: inline-block;
+        width: 80%;
+        padding: 0;
+    }
+
+    .Nav-hide #Nav-Links {
+        visibility: hidden;
+    }
+
+    #Nav-mobile-menu {
+        padding-top: 4em;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        padding-bottom: 1em;
+    }
+
+    .Nav-mobile-menu-icon:before {
+        content: '';
+        position: absolute;
+        top: 1.2em;
+        background-size: 25px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 3em;
+        background-image: url("../../images/burger.png");
+        background-repeat: no-repeat;
+        z-index: 2;
+    }
+
+    .whiteNav .Nav-mobile-menu-icon:before {     
+        background-image: url("../../images/burger.png");
+    }
+
+    .Nav-item {
+        width: 100%;
+        padding: 1em 0;
+        flex: none;
+        display: inline-block;
+        text-align: left;
+        color: #333;
+        font-size: 0.85em;
+    }
+
+    .Nav-item:hover::before {
+        border: none;
+    }
+
+    .Nav-item.whiteNav.active, .Nav-item.active {
+        border-bottom: none;
+    }
+
+    .moved {
+        animation-name: slidein;
+        animation-duration: 1.2s;
+    }
+
+    .unmoved {
+        animation-name: slideout;
+        animation-duration: 1.2s;
+    }
+
+    .Nav-hide {
+        display: block;
+        height: 4em;
+    }
+}

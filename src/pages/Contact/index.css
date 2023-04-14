@@ -1,0 +1,68 @@
+.Contact-Core {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contact {
+    flex: 0 48%;
+    text-align: left;
+}
+
+.Contact-Title {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.Contact.Contact-Form {
+    font-family: 'Geometria', sans-serif;
+    font-size: 0.9em;
+    vertical-align: top;
+}
+
+#contactForm span {
+    display: inline-block;
+    width: 100%;
+}
+
+#contactForm .Button {
+    border-radius: 5px;
+    padding: 4px 10px;
+    background-color: white;
+}
+
+#contactForm input, #contactForm textarea, #contactForm .Button {
+    border: 1px solid #999;
+}
+
+.Contact.ContactImg img{
+    max-width: 100%;
+    border-radius: 10px 0;
+}
+
+#submit {
+    cursor: pointer;
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+    .Contact {
+        flex: 0 1 100%;
+        text-align: left;
+    }
+
+    .Contact-Core {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 45.5em) {
+    .Contact-Core {
+        flex-direction: column;
+    }
+
+    #contactForm input, textarea {
+        width: 100%;
+        padding: 0;
+    }
+}

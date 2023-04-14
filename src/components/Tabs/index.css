@@ -1,0 +1,27 @@
+.Tabs {
+    width: 98%;
+    text-align: center;
+    margin: 2%;
+}
+
+.Tab {
+    /*border: 1px solid black;*/
+    box-shadow: 0 1px 15px 1px rgb(69 65 78 / 15%);
+    border-radius: 5px;
+    padding: 1em;
+    display: inline-block;
+    min-width: 8em;
+    margin: 0.5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Tab.Tab-active {
+    box-shadow: 0 1px 15px 1px rgb(69 65 78 / 15%);
+}
+
+.Tabs-Content {
+    text-align: center;
+    margin: 2% auto;
+    width: 98%;
+}

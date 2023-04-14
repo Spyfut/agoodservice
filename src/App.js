@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import AGoodService from "./pages/AGoodService";
+import Déménagement from "./pages/Déménagement";
+import Contact from "./pages/Contact";
+import Accueil from "./pages/Accueil";
+import Cookies from 'js-cookie';
+import {
+  Route,
+  Routes,
+  HashRouter
+} from "react-router-dom";
+import React, { } from 'react';
+
 
 function App() {
+
+  var cookieLangue;
+
+  Cookies.get('langue') ? cookieLangue = Cookies.get('langue') : Cookies.set('langue', 'fr');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+      <HashRouter>
+        <div className='App'>
+          <Routes>
+            <Route path="/" element={<Accueil cookie={cookieLangue} />} />
+            <Route path="/agoodservice" element={<AGoodService cookie={cookieLangue} />} />
+            <Route path="/demenagement" element={<Déménagement cookie={cookieLangue}/>} />
+            <Route path="/contact" element={<Contact cookie={cookieLangue} />} />
+          </Routes>
+        </div>
+      </HashRouter>
+    ) 
+
 }
 
 export default App;

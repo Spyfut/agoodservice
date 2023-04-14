@@ -1,0 +1,14 @@
+{
+    "urls": {
+        "Accueil": "/",
+        "A Good Service": "/agoodservice",
+        "Déménagement": "/demenagement",
+        "Contact": "/contact"
+    },
+    "englishUrls": {
+        "Home": "/",
+        "A Good Service": "/agoodservice",
+        "Moving": "/demenagement",
+        "Contact": "/contact"
+    }
+}
