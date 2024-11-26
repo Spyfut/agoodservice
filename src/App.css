@@ -1,5 +1,5 @@
 .App {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   color: #333;
 }
@@ -15,6 +15,27 @@
   position: absolute;
 }
 
+.ChoixLangue span {
+  cursor: pointer;
+}
+
+.Nav-Container {
+  border-bottom: solid 1px #f4f4f4;
+}
+
+.Container.Big-Container {
+  height: 100vh;
+  padding-bottom: 3em;
+  margin-bottom: 3em;
+}
+
+.Container {
+  width: 100%;
+  background: center repeat url("./images/background-texture.jpg");
+  height: 70vh;
+  padding-top: 3em;
+}
+
 
 @media (max-width: 45.5em) {
   .App {
@@ -23,6 +44,14 @@
 
   .ChoixLangue {
     top: 12px;
+  }
+
+  .Container {
+    height: 150vh;
+  }
+
+  .Container.Big-Container {
+    height: 280vh;
   }
 
 }

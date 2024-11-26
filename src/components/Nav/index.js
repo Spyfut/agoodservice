@@ -41,6 +41,9 @@ function Nav(props) {
                 </div>
             </div>}
 
+            <div id="logo">
+                <img id="Logo_AGoodService" title="Logo_AGoodService" alt="Logo_AGoodService" src={require('../../images/logo.png')} />
+            </div>
             {!isMobile && itemKeys.map((item) => (
                 <NavLink onClick={isMobile && toggleNav} key={item} to={items[item]} id={item} className={"Nav-item " + isModifiers} end>
                     {item}

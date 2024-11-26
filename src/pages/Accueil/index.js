@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./index.css"
 import Nav from "../../components/Nav";
 import navItems from "../../components/Nav/index.json";
@@ -21,10 +21,14 @@ function Accueil(props) {
     
     return (
     <>
-        <Nav items={props.cookie === "fr" ? (navItems.urls) : (navItems.englishUrls)} />
-        <div className='ChoixLangue'> <a href="" onClick={handleClickFr}>FR</a> | <a href="" onClick={handleClickEn}>EN</a></div>
-        <div className="accueilSlogan">
-            The way to make your moves easier
+    <div className="Nav-Container">
+        <Nav items={props.cookie === "en" ? (navItems.englishUrls) : (navItems.urls)} />
+    </div>
+        <div className='ChoixLangue'> <span onClick={handleClickFr}>FR</span> | <span onClick={handleClickEn}>EN</span></div>
+        <div className="Container">
+            <div className="accueilSlogan">
+                The way to make your moves easier  
+            </div>
         </div>
     </>  
     )

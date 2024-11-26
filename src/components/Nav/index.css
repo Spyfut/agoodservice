@@ -41,7 +41,9 @@ to {
 .Nav {
     display: flex;
     flex-direction: row;
-    padding: 2em 0em 5em 0em;
+    padding: 2em 0em 1em 0em;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .Nav-item.whiteNav {
@@ -69,7 +71,7 @@ to {
     position: absolute;
     width: 100%;
     left: 0;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
 }
 
 .Nav-item.whiteNav:hover::before {
@@ -94,12 +96,16 @@ to {
     height: 0.7em;
 }
 
+.Nav-hide #logo {
+    visibility: hidden;
+}
+
 /* Mobile */
 
 @media (max-width: 45.5em) {
     .Nav {
         display: inline-block;
-        width: 80%;
+        width: 100%;
         padding: 0;
     }
 

@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 3em;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .Demenagement {
@@ -40,8 +42,9 @@
 }
 
 .Demenagement-Text ul li{
-    line-height: 1.5em;
-    list-style: circle;
+    line-height: 2em;
+    list-style-image: url("../../images/checked.png");      
+
 }
 
 @media (max-width: 45.5em) {

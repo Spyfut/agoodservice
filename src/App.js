@@ -15,6 +15,8 @@ import React, { } from 'react';
 function App() {
 
   var cookieLangue;
+  console.log(cookieLangue);
+  console.log(Cookies.get('langue'), "ee");
 
   Cookies.get('langue') ? cookieLangue = Cookies.get('langue') : Cookies.set('langue', 'fr');
 
